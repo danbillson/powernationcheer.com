@@ -1,0 +1,47 @@
+.ctaBanner {
+    display: flex;
+    position: relative;
+    width: 100%;
+    background-color: #fafafa;
+
+    &__title {
+        position: absolute;
+        top: 70px;
+        left: 15%;
+        font-weight: 700;
+    }
+
+    &__banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 1600px;
+        width: 90%;
+        margin: 90px auto 70px;
+        background: rgb(165,67,169);
+        background: linear-gradient(80deg, rgba(165,67,169,1) 0%, rgba(240,15,118,1) 45%, rgba(220,87,94,1) 100%);
+    }
+
+    &__tagline {
+        position: relative;
+        color: #fff;
+        margin-top: 60px;
+        font-size: 14px;
+        left: -10%;
+    }
+
+    &__cta {
+        width: 50%;
+        margin-bottom: 60px;
+        font-weight: 300;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .ctaBanner {
+        &__cta {
+            width: fit-content;
+        }
+    }
+}

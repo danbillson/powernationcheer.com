@@ -1,0 +1,56 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+
+    &__image {
+        height: 300px;
+        background-image: linear-gradient(to right, rgba(94,6,46,0.1), rgba(0,0,0,0.6)), url('../../assets/images/pncrew.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        margin: 35px;
+    }
+
+    &__listItem {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    &__listBullet {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+        background-color: #eee;
+        color: #fff;
+        font-weight: 700;
+        font-size: 32px;
+        text-align: right;
+        line-height: 1.9;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .info {
+        flex-direction: row;
+
+        &>div {
+            width: 47.5%;
+            margin: 0 1.25%;
+        }
+
+        &__image {
+            height: auto;
+            margin-bottom: 0;
+        }
+    }
+}

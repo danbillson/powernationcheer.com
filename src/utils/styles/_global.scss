@@ -1,0 +1,29 @@
+.button {
+    display: block;
+    width: fit-content;
+    padding: 15px 50px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.2s ease-in-out;
+
+    &--primary {
+        border: 1px solid #fff;
+        color: #fff;
+
+        &:hover {
+            background-color: #fff;
+            color: #333;
+        }
+    }
+
+    &--secondary {
+        border: 1px solid #F00F76;
+        background-color: #F00F76;
+        color: #333;
+
+        &:hover {
+            background-color: #333;
+            color: #f00f76;
+        }
+    }
+}
