@@ -20,6 +20,9 @@
     }
 
     &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
         max-width: 1600px;
         width: 90%;
         margin: 0 auto;
@@ -30,9 +33,34 @@
         color: #fff;
     }
 
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        color: #fff;
 
+        ul {
+            margin: 30px 20px;
+
+            li {
+                margin-bottom: 10px;
+                font-weight: 300;
+
+                &:first-child {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
 }
 
 .facebook { fill: #3b5998; }
 .instagram { fill: url(#rg); }
 .youtube { fill: #ff0000; }
+
+@media only screen and (min-width: 768px) {
+    .footer {
+        &__content {
+            flex-direction: row;
+        }
+    }
+}

@@ -3,12 +3,19 @@ import React, { Component } from 'react';
 
 class Footer extends Component {
     renderSocial = () => {
-        return this.props.social.map(socialIcon => {
+        return this.props.social.map((socialIcon, index) => {
             return (
-                <a href={ socialIcon.link }>
+                <a href={ socialIcon.link } key={ index }>
                     { socialIcon.icon }
                 </a>
             );
+        })
+    }
+
+    renderFooterLists = () => {
+        return this.props.footerInfo.lists.map(list => {
+            let listTtem = list.map(item => <li key={ item }>{ item }</li>);
+            return <ul>{ listTtem }</ul>;
         })
     }
 
@@ -20,6 +27,9 @@ class Footer extends Component {
                 </div>
                 <div className="footer__content">
                     <h3 className="footer__title">{ this.props.footerInfo.title }</h3>
+                    <div className="footer__links">
+                        { this.renderFooterLists() }
+                    </div>
                 </div>
             </footer>
         );

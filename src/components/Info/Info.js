@@ -5,7 +5,7 @@ class Info extends Component {
     renderList = () => {
         return this.props.info.list.map((item, index) => {
             return (
-                <li className="info__listItem">
+                <li className="info__listItem" key={ index }>
                     <div className="info__listBullet">{ index + 1 }</div>
                     { item }
                 </li>
