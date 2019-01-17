@@ -1,53 +1,42 @@
 import './Header.scss';
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { ReactComponent as Logo } from '../../assets/images/powerNationLogo.svg';
-import { ReactComponent as Hamburger } from '../../assets/images/hamburger.svg';
+import { Link, withRouter } from 'react-router-dom';
 
 class Header extends Component {
-    toggleActive = () => {
-        document.querySelector('.hamburger').classList.toggle('active');
-        document.querySelector('.js-nav-toggle').classList.toggle('active');
+    componentDidMount = () => {
+        const hamburger = document.querySelector('.hamburger');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            document.querySelector('.js-nav-toggle').classList.toggle('active');
+        });
+        console.log(this.props);
+    }
+
+    renderNavLinks = () => {
+        return this.props.headerLinks.links.map((link, index) => {
+            if (!link.className) {
+                return <li key={ index }><Link to={ link.link }>{ link.name }</Link></li>;
+            }
+            return <li key={ index }><Link to={ link.link } className={ link.className }>{ link.name }</Link></li>;
+        })
     }
 
     render() {
         return (
-            <header className="header">
+            <header className={ this.props.location.pathname === '/' ? 'header' : 'header header--background'} >
                 <Link to="/" className="header__logo">
-                    <Logo />
+                    { this.props.headerLinks.logo }
                 </Link>
                 <nav className="nav">
                     <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/">Apparel</Link>
-                        </li>
-                        <li>
-                            <Link to="/">Camps</Link>
-                        </li>
-                        <li>
-                            <Link to="/" className="shop">Shop PN</Link>
-                        </li>
+                        { this.renderNavLinks() }
                     </ul>
                 </nav>
                 <nav className="mobileNav">
-                    <Hamburger className="hamburger" onClick={ this.toggleActive }/>
+                    { this.props.headerLinks.mobileNav }
                     <div className="mobileNav__links js-nav-toggle">
                         <ul>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/">Apparel</Link>
-                            </li>
-                            <li>
-                                <Link to="/">Camps</Link>
-                            </li>
-                            <li>
-                                <Link to="/" className="shop">Shop PN</Link>
-                            </li>
+                            { this.renderNavLinks() }
                         </ul>
                     </div>
                 </nav>
@@ -56,4 +45,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default withRouter(Header);

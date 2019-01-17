@@ -15,7 +15,7 @@ class Info extends Component {
 
     render () {
         return (
-            <div className="info">
+            <div className={ !this.props.info.reverse ? "info" : "info info__reverse" } id={ this.props.info.id }>
                 <div className="info__image" style={{ backgroundImage: this.props.info.image }}></div>
                 <div className="info__content">
                     <h3 className="info__title">{ this.props.info.title }</h3>

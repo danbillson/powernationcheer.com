@@ -1,0 +1,29 @@
+.subNav {
+    width: 90%;
+    max-width: 1600px;
+    margin: 20px auto 70px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+
+    &__item {
+        margin: 10px 20px;
+
+        a {
+            color: #505050;
+            transition: 0.2s ease-in-out;
+        }
+
+        &:hover {
+            a {
+                color: #F00F76;
+            }
+        }
+    }
+}

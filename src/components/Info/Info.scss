@@ -1,11 +1,27 @@
 .info {
     display: flex;
+    width: 90%;
+    max-width: 1600px;
     flex-direction: column;
-    margin-bottom: 60px;
+    margin: 0 auto 60px;
+
+    &__content {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            right: 30px;
+            top: 80px;
+            width: 130px;
+            height: 250px;
+            background: url('../../assets/images/wiggle.svg');
+            color: #eee;
+            z-index: -5;
+        }
+    }
 
     &__image {
         height: 300px;
-        background-image: linear-gradient(to right, rgba(94,6,46,0.1), rgba(0,0,0,0.6)), url('../../assets/images/pncrew.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -42,6 +58,10 @@
 @media only screen and (min-width: 768px) {
     .info {
         flex-direction: row;
+
+        &__reverse {
+            flex-direction: row-reverse;
+        }
 
         &>div {
             width: 47.5%;

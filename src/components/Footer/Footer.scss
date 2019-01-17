@@ -1,13 +1,15 @@
 .footer {
+    position: relative;
+    top: 20px;
     width: 100%;
     background-color: #000;
+    margin-top: -20px;
 
     &__social {
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 50px 0;
-        background-color: #fff;
 
         a {
             width: 40px;
@@ -15,6 +17,7 @@
 
             svg {
                 transition: 0.2s ease-in-out;
+                fill: #fff;
             }
         }
     }
@@ -53,9 +56,9 @@
     }
 }
 
-.facebook { fill: #3b5998; }
-.instagram { fill: url(#rg); }
-.youtube { fill: #ff0000; }
+// .facebook { fill: #3b5998; }
+// .instagram { fill: url(#rg); }
+// .youtube { fill: #ff0000; }
 
 @media only screen and (min-width: 768px) {
     .footer {

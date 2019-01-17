@@ -3,7 +3,9 @@
     justify-content: center;
     position: relative;
     flex-wrap: wrap;
-    margin-bottom: 60px;
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto 60px;
 
     &__link {
         width: 300px;

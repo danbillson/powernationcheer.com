@@ -13,9 +13,9 @@ class Footer extends Component {
     }
 
     renderFooterLists = () => {
-        return this.props.footerInfo.lists.map(list => {
+        return this.props.footerInfo.lists.map((list, index) => {
             let listTtem = list.map(item => <li key={ item }>{ item }</li>);
-            return <ul>{ listTtem }</ul>;
+            return <ul key={ index }>{ listTtem }</ul>;
         })
     }
 
