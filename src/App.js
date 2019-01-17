@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './layouts/Home/Home';
 import Apparel from './layouts/Apparel/Apparel';
+import Camps from './layouts/Camps/Camps';
 import { headerLinks, socialIcons, footerInfo } from './config/home';
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
                     <Switch>
                         <Route path="/" exact component={ Home } />
                         <Route path='/apparel' exact component={ Apparel } />
+                        <Route path='/camps' exact component={ Camps } />
                     </Switch>
                     <Footer social={ socialIcons } footerInfo={ footerInfo }/>
                 </>
