@@ -13,7 +13,7 @@
         align-items: center;
         max-width: 1600px;
         width: 90%;
-        padding: 20px 5%;
+        padding: 5px 5%;
     }
 
     &--background {
@@ -128,6 +128,11 @@
 .st2{ fill: #F00F76; }
 
 @media only screen and (min-width: 768px) {
+    .header {
+        &__nav {
+            padding: 20px 5%;
+        }
+    }
     .nav { display: flex; }
     .mobileNav { display: none;}
 }

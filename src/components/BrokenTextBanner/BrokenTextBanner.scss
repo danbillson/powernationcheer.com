@@ -5,7 +5,7 @@
     height: 50vh;
     width: 90%;
     max-width: 1600px;
-    margin: 150px auto 60px;
+    margin: 150px auto 90px;
 
     &__pattern {
         grid-column: 1 / 5;
@@ -18,10 +18,11 @@
         z-index: 5;
 
         h1 {
-            font-size: 48px;
+            font-size: 36px;
             text-shadow: 1px 3px 3px #00000080;
 
             &:nth-child(2) {
+                font-size: 24px;
                 font-weight: 700;
                 color: #F00F76;
             }

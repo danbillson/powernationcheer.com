@@ -3,14 +3,14 @@ html {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 48px;
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -43,7 +43,13 @@ a {
     text-transform: uppercase;
 }
 
+@media only screen and (min-width: 375px) {
+    h1 { font-size: 60px; }
+    h2 { font-size: 24px; }
+}
+
 @media only screen and (min-width: 768px) {
     h1 { font-size: 72px; }
     h2 { font-size: 36px; }
 }
+

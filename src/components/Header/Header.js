@@ -16,14 +16,19 @@ class Header extends Component {
         }));
     }
 
+    closeNav = () => {
+        document.querySelector('.hamburger').classList.remove('active');
+        document.querySelector('.js-nav-toggle').classList.remove('active');
+    }
+
     renderNavLinks = () => {
         return this.props.headerLinks.links.map((link, index) => {
             if (!link.className) {
-                return <li key={ index }><Link to={ link.link }>{ link.name }</Link></li>;
+                return <li key={ index }><Link to={ link.link } onClick={ this.closeNav }>{ link.name }</Link></li>;
             }
             return (
                 <li key={ index }>
-                    <Link to={ link.link } className={ link.className }>{ link.name }</Link>
+                    <Link to={ link.link } className={ link.className } onClick={ this.closeNav }>{ link.name }</Link>
                 </li>
             );
         })
