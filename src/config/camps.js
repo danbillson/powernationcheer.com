@@ -20,12 +20,12 @@ export const subNav = [{
 export const camps = {
     id: 'camps',
     title: 'Camps',
-    text: 'With more than 6 years experience in the industry, Power Nation is your one stop shop for all things cheerleading in the UK, from customised apparel and uniforms to sprung floors and cheer camps. All our products are designed by cheerleaders for cheerleaders, so we understand the quality and comfort needed to perform and train your very best.',
-    list: ['Worked with over 250 teams', 'Fulfilled over 1500 orders', 'Unique designs to fit your needs'],
+    text: `Our camps are run by the best of coaches in the country with over 30 years combined coaching experience with Coventry Dynamite and Team England`,
+    list: ['from £100/hour', 'Fully qualified and experienced coaches', 'Available for all ages and levels'],
     image: `linear-gradient(to right, rgba(94,6,46,0.1), rgba(0,0,0,0.6)), url(${ Apparel })`,
     cta: {
         link: '/',
-        text: 'Order Now'
+        text: 'Enquire Now'
     },
     reverse: false
 };
@@ -33,12 +33,13 @@ export const camps = {
 export const choreography = {
     id: 'choreography',
     title: 'Choreography',
-    text: 'With more than 6 years experience in the industry, Power Nation is your one stop shop for all things cheerleading in the UK, from customised apparel and uniforms to sprung floors and cheer camps. All our products are designed by cheerleaders for cheerleaders, so we understand the quality and comfort needed to perform and train your very best.',
-    list: ['Worked with over 250 teams', 'Fulfilled over 1500 orders', 'Unique designs to fit your needs'],
+    text: `Our choreographers here do an amazing job of putting routines together as well as making sure that they hit any score sheet criteria if needed. 
+    Our cheorgraphers at power nation have choreographed for a number of teams in the UK and in Ireland over the years.`,
+    list: ['£100/hour 1-15 athletes. £125/hour 16-32 athletes', 'Full routine including dance 7 hours', 'Routine without stunts and pyramid, including dance 5 hours', 'Routine clean, polish and score sheet check 3 hours'],
     image: `linear-gradient(to right, rgba(94,6,46,0.1), rgba(0,0,0,0.6)), url(${ Apparel })`,
     cta: {
         link: '/',
-        text: 'Order Now'
+        text: 'Enquire Now'
     },
     reverse: true
 };

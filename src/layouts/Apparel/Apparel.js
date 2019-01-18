@@ -2,7 +2,7 @@ import React from 'react';
 import BrokenTextBanner from '../../components/BrokenTextBanner/BrokenTextBanner';
 import SubNav from '../../components/SubNav/SubNav';
 import Info from '../../components/Info/Info';
-import { landing, subNav, tshirts, vests } from '../../config/apparel';
+import { landing, subNav, tshirts, spirit, practise, baseball, hoodies, backpacks } from '../../config/apparel';
 
 const Apparel = () => {
     return (
@@ -10,7 +10,11 @@ const Apparel = () => {
             <BrokenTextBanner landing={ landing }/>
             <SubNav subNav={ subNav } />
             <Info info={ tshirts }/>
-            <Info info={ vests }/>
+            <Info info={ spirit }/>
+            <Info info={ practise }/>
+            <Info info={ baseball }/>
+            <Info info={ hoodies }/>
+            <Info info={ backpacks }/>
         </>
     );
 }
