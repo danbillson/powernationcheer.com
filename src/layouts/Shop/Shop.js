@@ -2,7 +2,7 @@ import './Shop.scss';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import store from '../../store';
-import Products from '../../components/shopify/Products';
+import Products from '../../components/shopify/Products/Products';
 
 class Shop extends Component {
     constructor() {

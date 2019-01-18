@@ -1,5 +1,4 @@
 import React from 'react';
-import store from '../store';
 import { ReactComponent as Logo } from '../assets/images/powerNationLogo.svg';
 import { ReactComponent as Hamburger } from '../assets/images/hamburger.svg';
 import { ReactComponent as Tshirt } from '../assets/images/ios-shirt.svg';

@@ -5,12 +5,11 @@ import { connect } from 'react-redux';
 import store from './store';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import Cart from './components/shopify/Cart';
+import Cart from './components/shopify/Cart/Cart';
 import Home from './layouts/Home/Home';
 import Apparel from './layouts/Apparel/Apparel';
 import Camps from './layouts/Camps/Camps';
 import Shop from './layouts/Shop/Shop';
-import { tshirts } from './config/apparel';
 import { headerLinks, socialIcons, footerInfo } from './config/home';
 
 class App extends Component {
@@ -22,13 +21,12 @@ class App extends Component {
         this.handleCartOpen = this.handleCartOpen.bind(this);
     }
 
-    updateQuantityInCart(lineItemId, quantity) {
+    async updateQuantityInCart(lineItemId, quantity) {
         const state = store.getState();
         const checkoutId = state.checkout.id;
         const lineItemsToUpdate =[{ id: lineItemId, quantity: parseInt(quantity, 10)}];
-        state.clientInformation.checkout.updateLineItems(checkoutId, lineItemsToUpdate).then(res => {
-            store.dispatch({ type: 'UPDATE_QUANTITY_IN_CART', payload: { checkout: res }})
-        });
+        const res = await state.client.checkout.updateLineItems(checkoutId, lineItemsToUpdate);
+        store.dispatch({ type: 'UPDATE_QUANTITY_IN_CART', payload: { checkout: res }});
     }
 
     removeLineItemInCart(lineItemId) {

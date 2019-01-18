@@ -6,14 +6,14 @@ import store from '../../store';
 class Header extends Component {
     componentDidMount = () => {
         const hamburger = document.querySelector('.hamburger');
-        const cart = document.querySelector('.cartIcon');
+        const carts = document.querySelectorAll('.cartIcon');
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             document.querySelector('.js-nav-toggle').classList.toggle('active');
         });
-        cart.addEventListener('click', () => {
+        carts.forEach(cart => cart.addEventListener('click', () => {
             store.dispatch({ type: 'OPEN_CART' });
-        })
+        }));
     }
 
     renderNavLinks = () => {
@@ -48,6 +48,7 @@ class Header extends Component {
                         </ul>
                     </nav>
                     <nav className="mobileNav">
+                        { this.renderCart() }
                         { this.props.headerLinks.mobileNav }
                         <div className="mobileNav__links js-nav-toggle">
                             <ul>

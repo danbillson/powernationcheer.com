@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import LineItem from './LineItem';
+import LineItem from '../LineItem/LineItem';
 
 class Cart extends Component {
   constructor(props) {
@@ -12,8 +12,8 @@ class Cart extends Component {
     window.open(this.props.checkout.webUrl);
   }
 
-  render() {
-    let line_items = this.props.checkout.lineItems.map((line_item) => {
+  renderLineItems() {
+    return this.props.checkout.lineItems.map((line_item) => {
       return (
         <LineItem
           updateQuantityInCart={this.props.updateQuantityInCart}
@@ -22,8 +22,10 @@ class Cart extends Component {
           line_item={line_item}
         />
       );
-    });
+    })
+  }
 
+  render() {
     return (
       <div className={`Cart ${this.props.isCartOpen ? 'Cart--open' : ''}`}>
         <header className="Cart__header">
@@ -35,28 +37,28 @@ class Cart extends Component {
           </button>
         </header>
         <ul className="Cart__line-items">
-          {line_items}
+          { this.renderLineItems() }
         </ul>
         <footer className="Cart__footer">
           <div className="Cart-info clearfix">
             <div className="Cart-info__total Cart-info__small">Subtotal</div>
             <div className="Cart-info__pricing">
-              <span className="pricing">$ {this.props.checkout.subtotalPrice}</span>
+              <span className="pricing">£ {this.props.checkout.subtotalPrice}</span>
             </div>
           </div>
           <div className="Cart-info clearfix">
             <div className="Cart-info__total Cart-info__small">Taxes</div>
             <div className="Cart-info__pricing">
-              <span className="pricing">$ {this.props.checkout.totalTax}</span>
+              <span className="pricing">£ {this.props.checkout.totalTax}</span>
             </div>
           </div>
           <div className="Cart-info clearfix">
             <div className="Cart-info__total Cart-info__small">Total</div>
             <div className="Cart-info__pricing">
-              <span className="pricing">$ {this.props.checkout.totalPrice}</span>
+              <span className="pricing">£ {this.props.checkout.totalPrice}</span>
             </div>
           </div>
-          <button className="Cart__checkout button" onClick={this.openCheckout}>Checkout</button>
+          <button className="Cart__checkout button button--secondary" onClick={this.openCheckout}>Checkout</button>
         </footer>
       </div>
     )
