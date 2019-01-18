@@ -1,4 +1,5 @@
 import React from 'react';
+import store from '../store';
 import { ReactComponent as Logo } from '../assets/images/powerNationLogo.svg';
 import { ReactComponent as Hamburger } from '../assets/images/hamburger.svg';
 import { ReactComponent as Tshirt } from '../assets/images/ios-shirt.svg';
@@ -8,11 +9,13 @@ import { ReactComponent as Size } from '../assets/images/ios-resize.svg';
 import { ReactComponent as Facebook } from '../assets/images/logo-facebook.svg';
 import { ReactComponent as Instagram } from '../assets/images/logo-instagram.svg';
 import { ReactComponent as YouTube } from '../assets/images/logo-youtube.svg';
+import { ReactComponent as Cart } from '../assets/images/cart.svg';
 import PNCrew from '../assets/images/pncrew.jpg';
 
 export const headerLinks = {
     logo: <Logo />,
     mobileNav: <Hamburger className="hamburger" />,
+    cart: <Cart className="cartIcon" />,
     links: [{
         name: 'Home',
         link: '/'

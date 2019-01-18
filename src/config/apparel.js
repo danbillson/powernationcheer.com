@@ -1,4 +1,3 @@
-import React from 'react';
 import Wiggle from '../assets/images/wiggle.svg';
 import Apparel from '../assets/images/apparel.jpeg';
 
