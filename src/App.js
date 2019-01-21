@@ -1,6 +1,6 @@
 import './utils/styles/main.scss';
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import store from './store';
 import Header from './components/Header/Header';
@@ -49,7 +49,7 @@ class App extends Component {
         const state = store.getState();
         return (
             <div className="container">
-                <BrowserRouter>
+                <HashRouter>
                     <>
                         <Header headerLinks={ headerLinks }/>
                         <Switch>
@@ -67,7 +67,7 @@ class App extends Component {
                             removeLineItemInCart={ this.removeLineItemInCart }
                         />
                     </>
-                </BrowserRouter>
+                </HashRouter>
             </div>
         );
     }
