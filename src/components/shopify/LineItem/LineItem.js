@@ -1,3 +1,4 @@
+import './LineItem.scss';
 import React, {Component} from 'react';
 
 class LineItem extends Component {

@@ -4,15 +4,16 @@ import Hero from '../../components/Hero/Hero';
 import FourItemLinks from '../../components/FourItemLinks/FourItemLinks';
 import Info from '../../components/Info/Info';
 import CTABanner from '../../components/CTABanner/CTABanner';
+import { hero } from '../../config/home';
 
 const Home = () => {
     return (
         <div className="container">
             <Hero 
-                title="Power Nation Cheer"
-                subtitle="UK's Leading supplier for cheer apparel"
-                buttonPrimary={{ text: 'Our Work', link: '/' }}
-                buttonSecondary={{ text: 'Contact Us', link: '/' }}
+                title={ hero.title }
+                subtitle={ hero.subtitle }
+                buttonPrimary={ hero.buttonPrimary }
+                buttonSecondary={ hero.buttonSecondary }
             />
             <div className="content">
                 <FourItemLinks blocks={ fourItemLinksBlocks }/>

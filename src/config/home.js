@@ -11,6 +11,13 @@ import { ReactComponent as YouTube } from '../assets/images/logo-youtube.svg';
 import { ReactComponent as Cart } from '../assets/images/cart.svg';
 import PNCrew from '../assets/images/pncrew.jpg';
 
+export const hero = {
+    title: `Power Nation Cheer`,
+    subtitle: `UK's Leading supplier for cheer apparel`,
+    buttonPrimary: { text: 'Our Work', link: '/apparel' },
+    buttonSecondary: { text: 'Contact Us', link: 'mailto:info@powernationcheer.com' }
+}
+
 export const headerLinks = {
     logo: <Logo />,
     mobileNav: <Hamburger className="hamburger" />,
@@ -56,8 +63,8 @@ export const whyChooseUs = {
     list: ['Worked with over 250 teams', 'Fulfilled over 1500 orders', 'Unique designs to fit your needs'],
     image: `linear-gradient(to right, rgba(94,6,46,0.1), rgba(0,0,0,0.6)), url(${ PNCrew })`,
     cta: {
-        link: '/',
-        text: 'Contact Us'
+        link: '/shop',
+        text: 'Shop Now'
     },
     reverse: false
 };
