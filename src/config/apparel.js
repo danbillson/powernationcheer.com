@@ -36,7 +36,7 @@ export const tshirts = {
     list: ['Free design', 'Large print area', 'Youth & adult sizes available'],
     image: `linear-gradient(to right, rgba(94,6,46,0.1), rgba(0,0,0,0.6)), url(${ Apparel })`,
     cta: {
-        link: '/',
+        link: `mailto:info@powernationcheer.com?subject=T-shirts enquiry`,
         text: 'Order Now'
     },
     reverse: false
@@ -50,7 +50,7 @@ export const spirit = {
     list: ['2 print colours as standard', '10 working day turnaround*', 'High quality prints'],
     image: `linear-gradient(to right, rgba(94,6,46,0.1), rgba(0,0,0,0.6)), url(${ Apparel })`,
     cta: {
-        link: '/',
+        link: `mailto:info@powernationcheer.com?subject=Spirit jersey enquiry`,
         text: 'Order Now'
     },
     reverse: true
@@ -64,7 +64,7 @@ export const practise = {
     list: ['No limit to colours', '6-8 working week turnaround*', 'Youth & adult sizes available'],
     image: `linear-gradient(to right, rgba(94,6,46,0.1), rgba(0,0,0,0.6)), url(${ Apparel })`,
     cta: {
-        link: '/',
+        link: `mailto:info@powernationcheer.com?subject=Practise wear enquiry`,
         text: 'Order Now'
     },
     reverse: false
@@ -78,7 +78,7 @@ export const baseball = {
     list: ['Free design', 'Plain and glitter colours available', 'High quality prints'],
     image: `linear-gradient(to right, rgba(94,6,46,0.1), rgba(0,0,0,0.6)), url(${ Apparel })`,
     cta: {
-        link: '/',
+        link: `mailto:info@powernationcheer.com?subject=Baseball jersey enquiry`,
         text: 'Order Now'
     },
     reverse: true
@@ -92,7 +92,7 @@ export const hoodies = {
     list: ['2 print colours as standard', '10 working day turnaround*', 'Youth & adult sizes available'],
     image: `linear-gradient(to right, rgba(94,6,46,0.1), rgba(0,0,0,0.6)), url(${ Apparel })`,
     cta: {
-        link: '/',
+        link: `mailto:info@powernationcheer.com?subject=Hoodies enquiry`,
         text: 'Order Now'
     },
     reverse: false
@@ -106,7 +106,7 @@ export const backpacks = {
     list: ['Free design', '2 print colours as standard', 'Personalisation on all accessories'],
     image: `linear-gradient(to right, rgba(94,6,46,0.1), rgba(0,0,0,0.6)), url(${ Apparel })`,
     cta: {
-        link: '/',
+        link: `mailto:info@powernationcheer.com?subject=Backpack enquiry`,
         text: 'Order Now'
     },
     reverse: true
