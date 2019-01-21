@@ -18,11 +18,22 @@
         a {
             color: #505050;
             transition: 0.2s ease-in-out;
+            font-size: 12px;
         }
 
         &:hover {
             a {
                 color: #F00F76;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .subNav {
+        &__item {
+            a {
+                font-size: 16px;
             }
         }
     }

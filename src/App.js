@@ -1,6 +1,6 @@
 import './utils/styles/main.scss';
 import React, { Component } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import store from './store';
 import Header from './components/Header/Header';
@@ -10,6 +10,7 @@ import Home from './layouts/Home/Home';
 import Apparel from './layouts/Apparel/Apparel';
 import Camps from './layouts/Camps/Camps';
 import Shop from './layouts/Shop/Shop';
+import Size from './layouts/Size/Size';
 import { headerLinks, socialIcons, footerInfo } from './config/home';
 
 class App extends Component {
@@ -49,7 +50,7 @@ class App extends Component {
         const state = store.getState();
         return (
             <div className="container">
-                <HashRouter>
+                <BrowserRouter>
                     <>
                         <Header headerLinks={ headerLinks }/>
                         <Switch>
@@ -57,6 +58,8 @@ class App extends Component {
                             <Route path='/apparel' exact component={ Apparel } />
                             <Route path='/camps' exact component={ Camps } />
                             <Route path='/shop' exact component={ Shop } />
+                            <Route path='/size' exact component={ Size } />
+                            <Route component={ Home } />
                         </Switch>
                         <Footer social={ socialIcons } footerInfo={ footerInfo }/>
                         <Cart
@@ -67,7 +70,7 @@ class App extends Component {
                             removeLineItemInCart={ this.removeLineItemInCart }
                         />
                     </>
-                </HashRouter>
+                </BrowserRouter>
             </div>
         );
     }

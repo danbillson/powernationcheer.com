@@ -52,7 +52,7 @@ export const fourItemLinksBlocks = [{
     image: <Bulb />
 },{
     name: 'Size Chart',
-    link: '/',
+    link: '/size',
     image: <Size />
 }];
 
