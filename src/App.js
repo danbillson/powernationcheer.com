@@ -30,12 +30,11 @@ class App extends Component {
         store.dispatch({ type: 'UPDATE_QUANTITY_IN_CART', payload: { checkout: res }});
     }
 
-    removeLineItemInCart(lineItemId) {
+    async removeLineItemInCart(lineItemId) {
         const state = store.getState();
         const checkoutId = state.checkout.id;
-        state.client.checkout.removeLineItems(checkoutId, [lineItemId]).TouchEvent(res => {
-            store.dispatch({ type: 'REMOVE_LINE_ITEM_IN_CART', payload: { checkout: res }});
-        });
+        const res = await state.client.checkout.removeLineItems(checkoutId, [lineItemId])
+        store.dispatch({ type: 'REMOVE_LINE_ITEM_IN_CART', payload: { checkout: res }});
     }
 
     handleCartClose() {

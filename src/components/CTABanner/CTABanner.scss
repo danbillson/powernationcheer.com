@@ -6,9 +6,11 @@
 
     &__title {
         position: absolute;
+        width: 90%;
+        text-align: center;
         top: 70px;
         left: 50%;
-        transform:translateX(-50%);
+        transform: translateX(-50%);
         font-weight: 700;
     }
 
@@ -45,6 +47,7 @@
         &__title {
             position: absolute;
             left: 25%;
+            width: auto;
             transform:translateX(0);
         }
 

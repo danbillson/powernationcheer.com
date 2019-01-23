@@ -1,8 +1,8 @@
-const stateToSave = 'cart';
+const stateToSave = 'state';
 
 export const loadState = () => {
     try {
-        const serializedState = localstorage.getItem(stateToSave);
+        const serializedState = localStorage.getItem(stateToSave);
         if (serializedState === null) {
             return undefined;
         }

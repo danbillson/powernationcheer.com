@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import store from '../../store';
 import Products from '../../components/shopify/Products/Products';
+import { saveState } from '../../utils/scripts/localStorage';
 
 class Shop extends Component {
     constructor() {
@@ -16,6 +17,7 @@ class Shop extends Component {
         const checkoutId = state.checkout.id;
         state.client.checkout.addLineItems(checkoutId, lineItemsToAdd).then(res => {
             store.dispatch({ type: 'ADD_VARIANT_TO_CART', payload: { isCartOpen: true, checkout: res }});
+            saveState({ id: res.id });
         });
     }
 
