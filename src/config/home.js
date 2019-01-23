@@ -44,7 +44,7 @@ export const fourItemLinksBlocks = [{
     image: <Tshirt />
 },{
     name: 'Sprung Floors',
-    link: '/',
+    link: 'http://powernationfloors.com',
     image: <Floor />
 },{
     name: 'Cheer Camps & Choreography',
