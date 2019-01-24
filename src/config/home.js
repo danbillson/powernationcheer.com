@@ -82,7 +82,7 @@ export const footerInfo = {
     title: 'Power Nation Cheer',
     lists: [
         ['Power Nation', 'Unit 5D Consul Road', 'Rugby', 'CV21 1PB'],
-        ['Contact Information', 'info@powernationcheer.com', '01788 580839']
+        ['Contact Information', 'info@powernationcheer.com', '01788 570839']
     ]
 }
 

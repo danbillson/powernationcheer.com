@@ -10,7 +10,7 @@ export const landing = {
 
 export const subNav = [{
     name: 't-shirts & vests',
-    link: '#t-shirts'
+    link: '/apparel/t-shirts'
 }, {
     name: 'spirit jerseys',
     link: '#spirit-jerseys'
@@ -26,6 +26,34 @@ export const subNav = [{
 }, {
     name: 'backpacks & accessories',
     link: '#backpacks'
+}];
+
+export const blockOne = [{
+    name: 't-shirts & vests',
+    link: '/apparel/tshirts',
+    image: `url(${ Apparel })`
+},{
+    name: 'spirit jerseys',
+    link: '/apparel/spirit',
+    image: `url(${ Apparel })`
+},{
+    name: 'practise wear',
+    link: '/apparel/practise',
+    image: `url(${ Apparel })`
+}];
+
+export const blockTwo = [{
+    name: 'baseball jerseys',
+    link: '/apparel/baseball',
+    image: `url(${ Apparel })`
+},{
+    name: 'hoodies & sweats',
+    link: '/apparel/hoodies',
+    image: `url(${ Apparel })`
+},{
+    name: 'backpacks & accessories',
+    link: '/apparel/backpacks',
+    image: `url(${ Apparel })`
 }];
 
 export const tshirts = {

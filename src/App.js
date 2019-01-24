@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import Cart from './components/shopify/Cart/Cart';
 import Home from './layouts/Home/Home';
 import Apparel from './layouts/Apparel/Apparel';
+import ApparelItem from './layouts/ApparelItem/ApparelItem';
 import Camps from './layouts/Camps/Camps';
 import Shop from './layouts/Shop/Shop';
 import Size from './layouts/Size/Size';
@@ -55,6 +56,7 @@ class App extends Component {
                         <Switch>
                             <Route path="/" exact component={ Home } />
                             <Route path='/apparel' exact component={ Apparel } />
+                            <Route path='/apparel/:apparel' exact component={ ApparelItem } />
                             <Route path='/camps' exact component={ Camps } />
                             <Route path='/shop' exact component={ Shop } />
                             <Route path='/size' exact component={ Size } />

@@ -1,20 +1,14 @@
 import React from 'react';
 import BrokenTextBanner from '../../components/BrokenTextBanner/BrokenTextBanner';
-import SubNav from '../../components/SubNav/SubNav';
-import Info from '../../components/Info/Info';
-import { landing, subNav, tshirts, spirit, practise, baseball, hoodies, backpacks } from '../../config/apparel';
+import FourItemLinks from '../../components/FourItemLinks/FourItemLinks';
+import { landing, blockOne, blockTwo } from '../../config/apparel';
 
 const Apparel = () => {
     return (
         <>
             <BrokenTextBanner landing={ landing }/>
-            <SubNav subNav={ subNav } />
-            <Info info={ tshirts }/>
-            <Info info={ spirit }/>
-            <Info info={ practise }/>
-            <Info info={ baseball }/>
-            <Info info={ hoodies }/>
-            <Info info={ backpacks }/>
+            <FourItemLinks blocks={ blockOne } />
+            <FourItemLinks blocks={ blockTwo } />
         </>
     );
 }
