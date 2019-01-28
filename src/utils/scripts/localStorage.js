@@ -1,8 +1,9 @@
+import Cookie from 'js-cookie';
 const stateToSave = 'state';
 
 export const loadState = () => {
     try {
-        const serializedState = localStorage.getItem(stateToSave);
+        const serializedState = Cookie.get(stateToSave);
         if (serializedState === null) {
             return undefined;
         }
@@ -15,7 +16,7 @@ export const loadState = () => {
 export const saveState = (state) => {
     try {
         const serializedState = JSON.stringify(state);
-        localStorage.setItem(stateToSave, serializedState);
+        Cookie.set(stateToSave, serializedState, { expires: 1 });
     } catch (err) {
         console.error(err);
     }
