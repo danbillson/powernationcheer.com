@@ -8,8 +8,8 @@ import { loadState } from './utils/scripts/localStorage';
 
 const checkout = loadState();
 const client = Client.buildClient({
-    storefrontAccessToken: '3fd588f7039e6ecd8f7d232d3aa426d6',
-    domain: 'power-nation-cheer.myshopify.com'
+    storefrontAccessToken: '52883008d44757fe7eab2101856edd35',
+    domain: 'powernationcheer.myshopify.com'
 });
 
 store.dispatch({ type: 'CLIENT_CREATED', payload: client });
