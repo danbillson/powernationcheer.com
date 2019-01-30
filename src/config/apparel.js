@@ -1,5 +1,13 @@
 import Wiggle from '../assets/images/wiggle.svg';
-import Apparel from '../assets/images/apparel.jpeg';
+import Apparel from '../assets/images/apparel.jpg';
+import TShirt from '../assets/images/t-shirts.jpg';
+import Spirit from '../assets/images/spirit.jpg';
+import Practise from '../assets/images/practise.jpg';
+import Baseball from '../assets/images/vest2.JPG';
+import Hoodie from '../assets/images/hoodie.jpg';
+import Sliders from '../assets/images/slider.jpg';
+
+const overlay = `linear-gradient(to right, rgba(94,6,46,0.1), rgba(0,0,0,0.6)),`;
 
 export const landing = {
     lineOne: 'Cheer',
@@ -31,29 +39,29 @@ export const subNav = [{
 export const blockOne = [{
     name: 't-shirts & vests',
     link: '/apparel/tshirts',
-    image: `url(${ Apparel })`
+    image: `${ overlay } url(${ TShirt })`
 },{
     name: 'spirit jerseys',
     link: '/apparel/spirit',
-    image: `url(${ Apparel })`
+    image: `${ overlay } url(${ Spirit })`
 },{
     name: 'practise wear',
     link: '/apparel/practise',
-    image: `url(${ Apparel })`
+    image: `${ overlay } url(${ Practise })`
 }];
 
 export const blockTwo = [{
     name: 'baseball jerseys',
     link: '/apparel/baseball',
-    image: `url(${ Apparel })`
+    image: `${ overlay } url(${ Baseball })`
 },{
     name: 'hoodies & sweats',
     link: '/apparel/hoodies',
-    image: `url(${ Apparel })`
+    image: `${ overlay } url(${ Hoodie })`
 },{
     name: 'backpacks & accessories',
     link: '/apparel/backpacks',
-    image: `url(${ Apparel })`
+    image: `${ overlay } url(${ Sliders })`
 }];
 
 export const tshirts = {
