@@ -24,7 +24,7 @@ export const camps = {
     list: ['from £100/hour', 'Fully qualified and experienced coaches', 'Available for all ages and levels'],
     image: `linear-gradient(to right, rgba(94,6,46,0.1), rgba(0,0,0,0.6)), url(${ Camps })`,
     cta: {
-        link: '/',
+        link: 'mailto:info@powernationcheer.com?subject=Cheer Camps',
         text: 'Enquire Now'
     },
     reverse: false
@@ -38,7 +38,7 @@ export const choreography = {
     list: ['£100/hour 1-15 athletes. £125/hour 16-32 athletes', 'Full routine including dance 7 hours', 'Routine without stunts and pyramid, including dance 5 hours', 'Routine clean, polish and score sheet check 3 hours'],
     image: `linear-gradient(to right, rgba(94,6,46,0.1), rgba(0,0,0,0.6)), url(${ Choreography })`,
     cta: {
-        link: '/',
+        link: 'mailto:info@powernationcheer.com?subject=Cheer Choreography',
         text: 'Enquire Now'
     },
     reverse: true
