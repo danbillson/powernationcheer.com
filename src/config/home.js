@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as Logo } from '../assets/images/powerNationLogo.svg';
+import Logo from '../assets/images/powerNationLogo.png';
 import { ReactComponent as Hamburger } from '../assets/images/hamburger.svg';
 import { ReactComponent as Tshirt } from '../assets/images/ios-shirt.svg';
 import { ReactComponent as Floor } from '../assets/images/ios-apps.svg';
@@ -19,7 +19,7 @@ export const hero = {
 }
 
 export const headerLinks = {
-    logo: <Logo />,
+    logo: Logo,
     mobileNav: <Hamburger className="hamburger" />,
     cart: <Cart className="cartIcon" />,
     links: [{

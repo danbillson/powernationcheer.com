@@ -39,12 +39,20 @@ class Header extends Component {
         return this.props.headerLinks.cart
     }
 
+    renderLogo = () => {
+        if (typeof this.props.headerLinks.logo === 'string') {
+            return <img src={this.props.headerLinks.logo} alt="Power Nation Logo" />
+        }
+
+        return this.props.headerLinks.logo
+    }
+
     render() {
         return (
             <header className={ this.props.location.pathname === '/' ? 'header' : 'header header--background'} >
                 <div className="header__nav">           
                     <Link to="/" className="header__logo">
-                        { this.props.headerLinks.logo }
+                        { this.renderLogo() }
                     </Link>
                     <nav className="nav">
                         <ul>

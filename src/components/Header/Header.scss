@@ -23,6 +23,9 @@
 
     &__logo {
         width: 80px;
+        img {
+            width: 100%;
+        }
     }
 
     .shop {
@@ -123,9 +126,9 @@
     cursor: pointer;
 }
 
-.st0{ fill: #ffffff; }
-.st1{ fill:none; stroke: #F00F76; stroke-width: 2; stroke-miterlimit: 10; }
-.st2{ fill: #F00F76; }
+// .st0{ fill: #ffffff; }
+// .st1{ fill:none; stroke: #F00F76; stroke-width: 2; stroke-miterlimit: 10; }
+// .st2{ fill: #F00F76; }
 
 @media only screen and (min-width: 768px) {
     .header {
