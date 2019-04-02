@@ -14,7 +14,7 @@ import PNCrew from '../assets/images/pncrew.jpg';
 export const hero = {
     title: `Power Nation Cheer`,
     subtitle: `UK's Leading supplier for cheer apparel`,
-    buttonPrimary: { text: 'Our Work', link: '/apparel' },
+    buttonPrimary: { text: 'Shop Now', link: '/shop' },
     buttonSecondary: { text: 'Contact Us', link: 'mailto:info@powernationcheer.com' }
 }
 
