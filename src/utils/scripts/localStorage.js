@@ -15,8 +15,10 @@ export const loadState = () => {
 
 export const saveState = (state) => {
     try {
-        const serializedState = JSON.stringify(state);
-        Cookie.set(stateToSave, serializedState, { expires: 1 });
+        if (window.localStorage.getItem('consent')) {
+            const serializedState = JSON.stringify(state);
+            Cookie.set(stateToSave, serializedState, { expires: 1 });
+        }
     } catch (err) {
         console.error(err);
     }

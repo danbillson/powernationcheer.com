@@ -6,6 +6,7 @@ import store from './store';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Cart from './components/shopify/Cart/Cart';
+import CookiePopup from './components/CookiePopup/CookiePopup';
 import Home from './layouts/Home/Home';
 import Apparel from './layouts/Apparel/Apparel';
 import ApparelItem from './layouts/ApparelItem/ApparelItem';
@@ -70,6 +71,7 @@ class App extends Component {
                             updateQuantityInCart={ this.updateQuantityInCart }
                             removeLineItemInCart={ this.removeLineItemInCart }
                         />
+                        <CookiePopup />
                     </>
                 </BrowserRouter>
             </div>
