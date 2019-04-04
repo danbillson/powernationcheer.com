@@ -1,5 +1,6 @@
 import './Hero.scss';
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 const Hero = (props) => {
     return (
@@ -9,7 +10,7 @@ const Hero = (props) => {
                 <div className="hero__divider"></div>
                 <h2 className="hero__subtitle">{ props.subtitle }</h2>
                 <div className="hero__buttons">
-                    <a href={ props.buttonPrimary.link } className="button button--primary">{ props.buttonPrimary.text }</a>
+                    <Link to={ props.buttonPrimary.link } className="button button--primary">{ props.buttonPrimary.text }</Link>
                     <a href={ props.buttonSecondary.link } className="button button--secondary">{ props.buttonSecondary.text }</a>
                 </div>
             </div>
@@ -17,4 +18,4 @@ const Hero = (props) => {
     );
 }
 
-export default Hero;
+export default withRouter(Hero);
