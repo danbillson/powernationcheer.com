@@ -1,9 +1,9 @@
 import React from 'react';
-import { fourItemLinksBlocks, whyChooseUs, priceList } from '../../config/home';
+import { fourItemLinksBlocks, whyChooseUs, CTABlock } from '../../config/home';
 import Hero from '../../components/Hero/Hero';
 import FourItemLinks from '../../components/FourItemLinks/FourItemLinks';
 import Info from '../../components/Info/Info';
-import CTABanner from '../../components/CTABanner/CTABanner';
+import DoubleBanner from '../../components/DoubleBanner/DoubleBanner';
 import { hero } from '../../config/home';
 
 const Home = () => {
@@ -18,7 +18,7 @@ const Home = () => {
             <div className="content">
                 <FourItemLinks blocks={ fourItemLinksBlocks }/>
                 <Info info={ whyChooseUs }/>
-                <CTABanner banner={ priceList }/>
+                <DoubleBanner banners={ CTABlock }/>
             </div>
             
         </div>

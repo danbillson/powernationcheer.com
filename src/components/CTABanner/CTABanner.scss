@@ -1,16 +1,15 @@
 .ctaBanner {
     display: flex;
+    flex-direction: column;
     position: relative;
     width: 100%;
     background-color: #fafafa;
 
     &__title {
         position: absolute;
-        width: 90%;
+        width: 100%;
         text-align: center;
-        top: 70px;
-        left: 50%;
-        transform: translateX(-50%);
+        top: 50px;
         font-weight: 700;
     }
 
@@ -30,8 +29,8 @@
         position: relative;
         color: #fff;
         margin-top: 60px;
+        padding: 0 15px;
         font-size: 14px;
-        left: -10%;
     }
 
     &__cta {
@@ -44,13 +43,6 @@
 
 @media only screen and (min-width: 768px) {
     .ctaBanner {
-        &__title {
-            position: absolute;
-            left: 25%;
-            width: auto;
-            transform:translateX(0);
-        }
-
         &__cta {
             width: fit-content;
             font-size: 16px;

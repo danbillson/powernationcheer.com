@@ -70,13 +70,22 @@ export const whyChooseUs = {
 };
 
 export const priceList = {
-    title: 'Request a Price List',
-    tagline: 'Send us an email',
+    tagline: '2019/2020 Price list now available',
     cta: {
         link: 'mailto:info@powenationcheer.com',
-        text: 'Click here to request a price list'
+        text: 'Request now'
     }
 }
+
+export const getStarted = {
+    tagline: `Let's get started`,
+    cta: {
+        link: 'mailto:info@powenationcheer.com',
+        text: 'Get in touch now'
+    }
+}
+
+export const CTABlock = [priceList, getStarted];
 
 export const footerInfo = {
     title: 'Power Nation Cheer',

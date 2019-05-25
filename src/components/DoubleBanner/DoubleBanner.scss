@@ -1,0 +1,42 @@
+.doubleBanner__wrapper {
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.doubleBanner {
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    .ctaBanner {
+        &__banner {
+            margin: 30px auto;
+            background: #E53769;
+        }
+
+        &:first-child {
+            .ctaBanner__banner {
+                margin-bottom: 0;
+                background: #CD278D;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .doubleBanner {
+        flex-direction: row;
+        .ctaBanner {
+            &__banner {
+                margin: 50px auto;
+            }
+
+            &:first-child {
+                .ctaBanner__banner {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}
