@@ -1,6 +1,6 @@
 import './utils/styles/main.scss';
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import store from './store';
 import Header from './components/Header/Header';
@@ -27,16 +27,29 @@ class App extends Component {
     async updateQuantityInCart(lineItemId, quantity) {
         const state = store.getState();
         const checkoutId = state.checkout.id;
-        const lineItemsToUpdate =[{ id: lineItemId, quantity: parseInt(quantity, 10)}];
-        const res = await state.client.checkout.updateLineItems(checkoutId, lineItemsToUpdate);
-        store.dispatch({ type: 'UPDATE_QUANTITY_IN_CART', payload: { checkout: res }});
+        const lineItemsToUpdate = [
+            { id: lineItemId, quantity: parseInt(quantity, 10) }
+        ];
+        const res = await state.client.checkout.updateLineItems(
+            checkoutId,
+            lineItemsToUpdate
+        );
+        store.dispatch({
+            type: 'UPDATE_QUANTITY_IN_CART',
+            payload: { checkout: res }
+        });
     }
 
     async removeLineItemInCart(lineItemId) {
         const state = store.getState();
         const checkoutId = state.checkout.id;
-        const res = await state.client.checkout.removeLineItems(checkoutId, [lineItemId])
-        store.dispatch({ type: 'REMOVE_LINE_ITEM_IN_CART', payload: { checkout: res }});
+        const res = await state.client.checkout.removeLineItems(checkoutId, [
+            lineItemId
+        ]);
+        store.dispatch({
+            type: 'REMOVE_LINE_ITEM_IN_CART',
+            payload: { checkout: res }
+        });
     }
 
     handleCartClose() {
@@ -51,32 +64,36 @@ class App extends Component {
         const state = store.getState();
         return (
             <div className="container">
-                <BrowserRouter>
+                <HashRouter>
                     <>
-                        <Header headerLinks={ headerLinks }/>
+                        <Header headerLinks={headerLinks} />
                         <Switch>
-                            <Route path="/" exact component={ Home } />
-                            <Route path='/apparel' exact component={ Apparel } />
-                            <Route path='/apparel/:apparel' exact component={ ApparelItem } />
-                            <Route path='/camps' exact component={ Camps } />
-                            <Route path='/shop' exact component={ Shop } />
-                            <Route path='/size' exact component={ Size } />
-                            <Route component={ Home } />
+                            <Route path="/" exact component={Home} />
+                            <Route path="/apparel" exact component={Apparel} />
+                            <Route
+                                path="/apparel/:apparel"
+                                exact
+                                component={ApparelItem}
+                            />
+                            <Route path="/camps" exact component={Camps} />
+                            <Route path="/shop" exact component={Shop} />
+                            <Route path="/size" exact component={Size} />
+                            <Route component={Home} />
                         </Switch>
-                        <Footer social={ socialIcons } footerInfo={ footerInfo }/>
+                        <Footer social={socialIcons} footerInfo={footerInfo} />
                         <Cart
-                            checkout={ state.checkout }
-                            isCartOpen={ state.isCartOpen }
-                            handleCartClose={ this.handleCartClose }
-                            updateQuantityInCart={ this.updateQuantityInCart }
-                            removeLineItemInCart={ this.removeLineItemInCart }
+                            checkout={state.checkout}
+                            isCartOpen={state.isCartOpen}
+                            handleCartClose={this.handleCartClose}
+                            updateQuantityInCart={this.updateQuantityInCart}
+                            removeLineItemInCart={this.removeLineItemInCart}
                         />
                         <CookiePopup />
                     </>
-                </BrowserRouter>
+                </HashRouter>
             </div>
         );
     }
 }
 
-export default connect((state) => state)(App);
+export default connect(state => state)(App);
