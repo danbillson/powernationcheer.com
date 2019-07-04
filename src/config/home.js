@@ -72,7 +72,7 @@ export const whyChooseUs = {
 export const priceList = {
     tagline: '2019/2020 Price list now available',
     cta: {
-        link: 'mailto:info@powenationcheer.com',
+        link: 'mailto:info@powernationcheer.com',
         text: 'Request now'
     }
 }
@@ -80,7 +80,7 @@ export const priceList = {
 export const getStarted = {
     tagline: `Let's get started`,
     cta: {
-        link: 'mailto:info@powenationcheer.com',
+        link: 'mailto:info@powernationcheer.com',
         text: 'Get in touch now'
     }
 }
