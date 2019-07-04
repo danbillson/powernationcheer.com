@@ -1,4 +1,0 @@
-# Redirect / to /#/ for Hash Router
-/apparel    /#/apparel
-/camps      /#/camps
-/shop       /#/shop
