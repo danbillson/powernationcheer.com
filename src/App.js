@@ -12,6 +12,7 @@ import Apparel from './layouts/Apparel/Apparel';
 import ApparelItem from './layouts/ApparelItem/ApparelItem';
 import Camps from './layouts/Camps/Camps';
 import Shop from './layouts/Shop/Shop';
+import ProductPage from './layouts/ProductPage/ProductPage';
 import Size from './layouts/Size/Size';
 import { headerLinks, socialIcons, footerInfo } from './config/home';
 
@@ -77,6 +78,11 @@ class App extends Component {
                             />
                             <Route path="/camps" exact component={Camps} />
                             <Route path="/shop" exact component={Shop} />
+                            <Route
+                                path="/product/:product"
+                                exact
+                                component={ProductPage}
+                            />
                             <Route path="/size" exact component={Size} />
                             <Route component={Home} />
                         </Switch>
